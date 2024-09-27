@@ -3,6 +3,7 @@ from .java9 import Java9Lexer, Java9Parser, Java9Listener
 from .kotlin import KotlinLexer, KotlinParser, KotlinECSTListener
 from .dart import Dart2Lexer, Dart2Parser, DartECSTListener
 #from .swift import Swift5Lexer, Swift5Parser, SwiftECSTListener
+from .c import C11Lexer, C11Parser, C11Listener
 
 
 CPP14Lexer
@@ -20,3 +21,7 @@ DartECSTListener
 #Swift5Lexer
 #Swift5Parser
 #SwiftECSTListener
+
+C11Lexer
+C11Parser
+C11Listener
