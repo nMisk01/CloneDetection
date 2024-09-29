@@ -23,11 +23,14 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#primaryExpression.
     def enterPrimaryExpression(self, ctx:C11Parser.PrimaryExpressionContext):
-        pass
+        act_token = ('',0,0)
+        primary_expression_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'PRIMARY_EXPRESSION')
+        self.current_node.add_child(primary_expression_node)
+        self.current_node = primary_expression_node
 
     # Exit a parse tree produced by C11Parser#primaryExpression.
     def exitPrimaryExpression(self, ctx:C11Parser.PrimaryExpressionContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#genericSelection.
@@ -203,11 +206,14 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#assignmentExpression.
     def enterAssignmentExpression(self, ctx:C11Parser.AssignmentExpressionContext):
-        pass
+        act_token = ShortToken('',0,0)
+        assignment_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'ASSIGNMENT_EXPRESSION')
+        self.current_node.add_child(assignment_node)
+        self.current_node = assignment_node
 
     # Exit a parse tree produced by C11Parser#assignmentExpression.
     def exitAssignmentExpression(self, ctx:C11Parser.AssignmentExpressionContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#assignmentOperator.
@@ -221,29 +227,42 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#expression.
     def enterExpression(self, ctx:C11Parser.ExpressionContext):
-        pass
+        act_token = ShortToken('',ctx.start.line,ctx.start.column)
+        
+        expression_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'EXPRESSION')
+        self.current_node.add_child(expression_node)
+        self.current_node = expression_node
 
     # Exit a parse tree produced by C11Parser#expression.
     def exitExpression(self, ctx:C11Parser.ExpressionContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#constantExpression.
     def enterConstantExpression(self, ctx:C11Parser.ConstantExpressionContext):
-        pass
+        act_token = ShortToken(ctx.getText(), ctx.start.line, ctx.start.column) 
+        constant_node = ECSTNode(
+        str(uuid.uuid4()), self.current_node, act_token, 'CONSTANT_EXPRESSION')
+        self.current_node.add_child(constant_node) 
+        self.current_node = constant_node
 
     # Exit a parse tree produced by C11Parser#constantExpression.
     def exitConstantExpression(self, ctx:C11Parser.ConstantExpressionContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#declaration.
     def enterDeclaration(self, ctx:C11Parser.DeclarationContext):
-        pass
+        act_token = ShortToken('', 0, 0)
+        declaration_node = ECSTNode(
+        str(uuid.uuid4()), self.current_node, act_token,'DECLARATION')
+        self.current_node.add_child(declaration_node)
+        self.current_node = declaration_node
+
 
     # Exit a parse tree produced by C11Parser#declaration.
     def exitDeclaration(self, ctx:C11Parser.DeclarationContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#declarationSpecifiers.
@@ -302,47 +321,88 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#typeSpecifier.
     def enterTypeSpecifier(self, ctx:C11Parser.TypeSpecifierContext):
-        pass
+        act_token = ShortToken('', ctx.start.line, ctx.start.column)
+    
+        type_specifier = ''
+        
+        if ctx.INT():
+            type_specifier = 'INT'
+        elif ctx.CHAR():
+            type_specifier = 'CHAR'
+        elif ctx.FLOAT():
+            type_specifier = 'FLOAT'
+        elif ctx.DOUBLE():
+            type_specifier = 'DOUBLE'
+        elif ctx.VOID():
+            type_specifier = 'VOID'
+        elif ctx.STRUCT() or ctx.UNION():
+            type_specifier = 'STRUCT_OR_UNION'  # ako je neki od ovih tipova
+        elif ctx.IDENTIFIER():
+            type_specifier = 'USER_TYPE'  # korisnicki tipovi
 
-    # Exit a parse tree produced by C11Parser#typeSpecifier.
-    def exitTypeSpecifier(self, ctx:C11Parser.TypeSpecifierContext):
-        pass
+        type_node = ECSTNode(
+            str(uuid.uuid4()), self.current_node, act_token,
+            type_specifier
+        )
+        
+        self.current_node.add_child(type_node)
+        self.current_node = type_node
+
+
+        # Exit a parse tree produced by C11Parser#typeSpecifier.
+        def exitTypeSpecifier(self, ctx:C11Parser.TypeSpecifierContext):
+            self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#structOrUnionSpecifier.
     def enterStructOrUnionSpecifier(self, ctx:C11Parser.StructOrUnionSpecifierContext):
-        pass
+        act_token = ('',0,0)
+        struct_or_union_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'STRUCT_OR_UNION')
+        self.current_node.add_child(struct_or_union_node)
+        self.current_node = struct_or_union_node
 
     # Exit a parse tree produced by C11Parser#structOrUnionSpecifier.
     def exitStructOrUnionSpecifier(self, ctx:C11Parser.StructOrUnionSpecifierContext):
-        pass
+        self.current_node = self.current_node.parent
+
 
 
     # Enter a parse tree produced by C11Parser#structOrUnion.
     def enterStructOrUnion(self, ctx:C11Parser.StructOrUnionContext):
-        pass
+        act_token = ShortToken('',ctx.start.line,ctx.start.column)
+        struct_or_union_type = 'STRUCT' if ctx.STRUCT() else 'UNION'
+        
+        struct_union_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,struct_or_union_type)
+        self.current_node.add_child(struct_or_union_type)
+        self.current_node = struct_union_node
 
     # Exit a parse tree produced by C11Parser#structOrUnion.
     def exitStructOrUnion(self, ctx:C11Parser.StructOrUnionContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#structDeclarationList.
     def enterStructDeclarationList(self, ctx:C11Parser.StructDeclarationListContext):
-        pass
+        act_token = ('',0,0)
+        struct_declaration_list_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'STRUCT_DECLARATION_LIST')
+        self.current_node.add_child(struct_declaration_list_node)
+        self.current_node = struct_declaration_list_node
 
     # Exit a parse tree produced by C11Parser#structDeclarationList.
     def exitStructDeclarationList(self, ctx:C11Parser.StructDeclarationListContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#structDeclaration.
     def enterStructDeclaration(self, ctx:C11Parser.StructDeclarationContext):
-        pass
+        act_token = ('',0,0)
+        struct_declaration_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'STRUCT_DECLARATION')
+        self.current_node.add_child(struct_declaration_node)
+        self.current_node = struct_declaration_node
 
     # Exit a parse tree produced by C11Parser#structDeclaration.
     def exitStructDeclaration(self, ctx:C11Parser.StructDeclarationContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#specifierQualifierList.
@@ -356,47 +416,62 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#structDeclaratorList.
     def enterStructDeclaratorList(self, ctx:C11Parser.StructDeclaratorListContext):
-        pass
+        act_token = ('',0,0)
+        struct_declarator_list_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'STRUCT_DECLARATOR_LIST')
+        self.current_node.add_child(struct_declarator_list_node)
+        self.current_node = struct_declarator_list_node
 
     # Exit a parse tree produced by C11Parser#structDeclaratorList.
     def exitStructDeclaratorList(self, ctx:C11Parser.StructDeclaratorListContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#structDeclarator.
     def enterStructDeclarator(self, ctx:C11Parser.StructDeclaratorContext):
-        pass
+        act_token = ('',0,0)
+        struct_declarator_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'STRUCT_DECLARATOR')
+        self.current_node.add_child(struct_declarator_node)
+        self.current_node = struct_declarator_node
 
     # Exit a parse tree produced by C11Parser#structDeclarator.
     def exitStructDeclarator(self, ctx:C11Parser.StructDeclaratorContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#enumSpecifier.
     def enterEnumSpecifier(self, ctx:C11Parser.EnumSpecifierContext):
-        pass
+        act_token = ('',0,0)
+        enum_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'ENUM_DECL')
+        self.current_node.add_child(enum_node)
+        self.current_node = enum_node
 
     # Exit a parse tree produced by C11Parser#enumSpecifier.
     def exitEnumSpecifier(self, ctx:C11Parser.EnumSpecifierContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#enumeratorList.
     def enterEnumeratorList(self, ctx:C11Parser.EnumeratorListContext):
-        pass
+        act_token = ('', 0,0)
+        enumerator_list_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'ENUMERATOR_LIST')
+        self.current_node.add_child(enumerator_list_node)
+        self.current_node = enumerator_list_node
 
     # Exit a parse tree produced by C11Parser#enumeratorList.
     def exitEnumeratorList(self, ctx:C11Parser.EnumeratorListContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#enumerator.
     def enterEnumerator(self, ctx:C11Parser.EnumeratorContext):
-        pass
+        act_token = ('',0,0)
+        enumerator_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'ENUMERATOR')
+        self.current_node.add_child = enumerator_node
+        self.current_node = enumerator_node
 
     # Exit a parse tree produced by C11Parser#enumerator.
     def exitEnumerator(self, ctx:C11Parser.EnumeratorContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#enumerationConstant.
@@ -428,11 +503,16 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#functionSpecifier.
     def enterFunctionSpecifier(self, ctx:C11Parser.FunctionSpecifierContext):
-        pass
+        specifier = ctx.getText() #inline,static,drugi,...
+        act_token = ShortToken('',ctx.start.line,ctx.start.column)
+        
+        function_specifier_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'FUNCTION_SPECIFIER')
+        self.current_node.add_child(function_specifier_node)
+        self.current_node = function_specifier_node
 
     # Exit a parse tree produced by C11Parser#functionSpecifier.
     def exitFunctionSpecifier(self, ctx:C11Parser.FunctionSpecifierContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#alignmentSpecifier.
@@ -518,11 +598,14 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#pointer.
     def enterPointer(self, ctx:C11Parser.PointerContext):
-        pass
+        act_token = ('',0,0)
+        pointer_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'POINTER')
+        self.current_node.add_child(pointer_node)
+        self.current_node = pointer_node
 
     # Exit a parse tree produced by C11Parser#pointer.
     def exitPointer(self, ctx:C11Parser.PointerContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#typeQualifierList.
@@ -570,16 +653,17 @@ class C11ECSTListener(ParseTreeListener):
     # Enter a parse tree produced by C11Parser#identifierList.
     def enterIdentifierList(self, ctx:C11Parser.IdentifierListContext):
         try:
+            #for identifier in ctx.IDENTIFIER()
             token = (ctx.IDENTIFIER())
             token = token.symbol
             act_token = ShortToken(token.text, token.line, token.column)
         except AttributeError:
             act_token = ShortToken('', -1, -1)
-        file_node = ECSTNode(
+        identifier_node = ECSTNode(
             str(uuid.uuid4()), self.current_node, act_token,
             'LITERAL')
-        self.current_node.add_child(file_node)
-        self.current_node = file_node
+        self.current_node.add_child(identifier_node)
+        self.current_node = identifier_node
 
     # Exit a parse tree produced by C11Parser#identifierList.
     def exitIdentifierList(self, ctx:C11Parser.IdentifierListContext):
@@ -615,11 +699,15 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#typedefName.
     def enterTypedefName(self, ctx:C11Parser.TypedefNameContext):
-        pass
+        act_token = ShortToken('',ctx.start.line,ctx.start.column)
+        
+        typedef_name_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'TYPEDEF_NAME')
+        self.current_node.add_child(typedef_name_node)
+        self.current_node = typedef_name_node
 
     # Exit a parse tree produced by C11Parser#typedefName.
     def exitTypedefName(self, ctx:C11Parser.TypedefNameContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#initializer.
@@ -692,22 +780,35 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#labeledStatement.
     def enterLabeledStatement(self, ctx:C11Parser.LabeledStatementContext):
-        pass
+        act_token = ShortToken('', ctx.start.line, ctx.start.column)
+
+        # cvor za labelisani statement
+        labeled_node = ECSTNode(
+            str(uuid.uuid4()), self.current_node, act_token,
+            'LABELED_STATEMENT'
+        )
+
+        # labela
+        label_node = ECSTNode(
+            str(uuid.uuid4()), labeled_node, act_token,'LABEL', label=ctx.identifier().getText())  
+        labeled_node.add_child(label_node)
+        self.current_node.add_child(labeled_node)
+        self.current_node = labeled_node
 
     # Exit a parse tree produced by C11Parser#labeledStatement.
     def exitLabeledStatement(self, ctx:C11Parser.LabeledStatementContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#compoundStatement.
     def enterCompoundStatement(self, ctx:C11Parser.CompoundStatementContext):
         if self.current_node.type == 'FUNCTION_DECL':
             act_token = ShortToken('', 0, 0)
-            file_node = ECSTNode(
+            compound_node = ECSTNode(
                 str(uuid.uuid4()), self.current_node, act_token,
                 'FUNCTION_BODY')
-            self.current_node.add_child(file_node)
-            self.current_node = file_node
+            self.current_node.add_child(compound_node)
+            self.current_node = compound_node
         
 
     # Exit a parse tree produced by C11Parser#compoundStatement.
@@ -763,38 +864,76 @@ class C11ECSTListener(ParseTreeListener):
 
     # Enter a parse tree produced by C11Parser#forCondition.
     def enterForCondition(self, ctx:C11Parser.ForConditionContext):
-        pass
+        act_token = ShortToken('',0,0)
+        condition_node = ECSTNode(str(uuid.uuid4),self.current_node,act_token,'FOR_CONDITION')
+        self.current_node.add_child(condition_node)
+        self.current_node = condition_node
 
     # Exit a parse tree produced by C11Parser#forCondition.
     def exitForCondition(self, ctx:C11Parser.ForConditionContext):
-        pass
+        self.current_node = self.current_node.parent
+
 
 
     # Enter a parse tree produced by C11Parser#forDeclaration.
     def enterForDeclaration(self, ctx:C11Parser.ForDeclarationContext):
-        pass
+        #v1 ->pocetni template
+        #act_token = ShortToken('', 0, 0)
+        #file_node = ECSTNode(
+        #    str(uuid.uuid4()), self.current_node, act_token,
+        #    'VARIABLE_DECL')
+        #self.current_node.add_child(file_node)
+        #self.current_node = file_node
+        
+        act_token = ShortToken('', ctx.start.line, ctx.start.column)
+        for_declaration_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'FOR_DECLARATION')
+        self.current_node.add_child(for_declaration_node)
+        self.current_node = for_declaration_node
+
 
     # Exit a parse tree produced by C11Parser#forDeclaration.
     def exitForDeclaration(self, ctx:C11Parser.ForDeclarationContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#forExpression.
     def enterForExpression(self, ctx:C11Parser.ForExpressionContext):
-        pass
+        act_token = ShortToken('', 0, 0)
+        file_node = ECSTNode(
+            str(uuid.uuid4()), self.current_node, act_token,
+            'LOOP_STATEMENT')
+        self.current_node.add_child(file_node)
+        self.current_node = file_node
 
     # Exit a parse tree produced by C11Parser#forExpression.
     def exitForExpression(self, ctx:C11Parser.ForExpressionContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#jumpStatement.
     def enterJumpStatement(self, ctx:C11Parser.JumpStatementContext):
-        pass
+        act_token = ShortToken('', ctx.start.line, ctx.start.column)
+
+        # proveri tip 
+        if ctx.BREAK():
+            jump_type = 'BREAK'
+        elif ctx.CONTINUE():
+            jump_type = 'CONTINUE'
+        elif ctx.RETURN():
+            jump_type = 'RETURN'
+        elif ctx.GOTO():
+            jump_type = 'GOTO'
+        else:
+            jump_type = 'UNKNOWN_JUMP'
+
+        jump_node = ECSTNode(str(uuid.uuid4()), self.current_node, act_token,jump_type)
+
+        self.current_node.add_child(jump_node)
+        self.current_node = jump_node
 
     # Exit a parse tree produced by C11Parser#jumpStatement.
     def exitJumpStatement(self, ctx:C11Parser.JumpStatementContext):
-        pass
+        self.current_node = self.current_node.parent
 
 
     # Enter a parse tree produced by C11Parser#compilationUnit.
