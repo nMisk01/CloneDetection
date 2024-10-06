@@ -152,21 +152,21 @@ def compare_block(tree_1, tree_2):
             token_2 = act_2.token
             if token_1.text == token_2.text and token_1 != ' ' and len(act_1.children) == len(act_2.children):
                 # Type 1 clone - exact clones
-                #print("type 1")
-                #print(token_1)
-                #print(token_2)
+                print("type 1")
+                print(token_1)
+                print(token_2)
                 clones.append(("type1", token_1, token_2))
                 count_type_1 += 1
             elif token_1 != ' ' and len(act_1.children) == len(act_2.children): 
                 #Type 2 clone - variable rename
-                #print("type 2")
+                print("type 2")
                 clones.append(("type2", token_1, token_2))
                 count_type_2 += 1
             else:
                 # Type 3 clone - statement changes
-                #print("type 3")
-                #print(token_1)
-                #print(token_2)
+                print("type 3")
+                print(token_1)
+                print(token_2)
                 clones.append(("type3", token_1, token_2))
                 count_type_3 += 1
         i += 1
@@ -264,18 +264,21 @@ if __name__ == "__main__":
     for f in files:
         tree = load_grammar(f)
         ecst_trees.append(tree)
+    print(ecst_trees[0])
+    print(ecst_trees[1])
+    
 
     result = compare_ecst(ecst_trees, return_all=True)
     type1clones = filter(lambda tup: tup[0] == "type1", result[0])
     type2clones = filter(lambda tup: tup[0] == "type2", result[0])
     type3clones = filter(lambda tup: tup[0] == "type3", result[0])
     end = time.time()
-   # print("===== TYPE 1 CLONES ======")
-   # print_clones(type1clones)
-   # print("===== TYPE 2 CLONES ======")
-   # print_clones(type2clones)
-   # print("===== TYPE 3 CLONES ======")
-   # print_clones(type3clones)
+    print("===== TYPE 1 CLONES ======")
+    print_clones(type1clones)
+    print("===== TYPE 2 CLONES ======")
+    print_clones(type2clones)
+    print("===== TYPE 3 CLONES ======")
+    print_clones(type3clones)
     print(f'Total clones {len(result[0])}')
     print(f'Total type 1 clones {result[1]}')
     print(f'Total type 2 clones {result[2]}')

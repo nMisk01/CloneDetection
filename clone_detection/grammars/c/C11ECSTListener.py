@@ -450,7 +450,7 @@ class C11ECSTListener(ParseTreeListener):
     
         type_specifier = ''
         
-        if ctx.INT():
+        if ctx.Int():
             type_specifier = 'INT'
         elif ctx.CHAR():
             type_specifier = 'CHAR'
@@ -731,9 +731,9 @@ class C11ECSTListener(ParseTreeListener):
             
             act_token = ShortToken(token.text,token.line,token.column)
         except AttributeError:
-            act_token = ShortToken(-1,-1)
-            
-        declarator_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'DIRECT_DECLARATOR')
+            act_token = ShortToken('',-1,-1)
+        print("IDENTIFIER")
+        declarator_node = ECSTNode(uuid.uuid4(),self.current_node,act_token,'IDENTIFIER')
         
         self.current_node.add_child(declarator_node)
         self.current_node = declarator_node
@@ -1186,13 +1186,13 @@ class C11ECSTListener(ParseTreeListener):
         act_token = ShortToken('', ctx.start.line, ctx.start.column)
 
         # proveri tip 
-        if ctx.BREAK():
+        if ctx.Break():
             jump_type = 'BREAK'
-        elif ctx.CONTINUE():
+        elif ctx.Continue():
             jump_type = 'CONTINUE'
-        elif ctx.RETURN():
+        elif ctx.Return():
             jump_type = 'RETURN'
-        elif ctx.GOTO():
+        elif ctx.Goto():
             jump_type = 'GOTO'
         else:
             jump_type = 'UNKNOWN_JUMP'
