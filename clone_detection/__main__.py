@@ -16,9 +16,10 @@ START_RULE = {
     'kt': 'kotlinFile',
     #'cpp': 'translationUnit',
     'dart': 'compilationUnit',
+    'c': 'compilationUnit'
 }
 
-SUPPORTED_LANGUAGES = {'kt', 'dart'}#, 'swift'}
+SUPPORTED_LANGUAGES = {'kt', 'dart','c'}#, 'swift'}
 
 SIMILAR_NODES = {
     'IDENTIFIER': ['LITERAL', 'IDENTIFIER'],

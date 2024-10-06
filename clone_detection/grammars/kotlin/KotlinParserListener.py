@@ -1,6 +1,9 @@
-# Generated from ../clone_detection/grammars/kotlin/KotlinParser.g4 by ANTLR 4.7.1
+# Generated from KotlinParser.g4 by ANTLR 4.7.1
 from antlr4 import *
-from .KotlinParser import KotlinParser
+if __name__ is not None and "." in __name__:
+    from .KotlinParser import KotlinParser
+else:
+    from KotlinParser import KotlinParser
 
 # This class defines a complete listener for a parse tree produced by KotlinParser.
 class KotlinParserListener(ParseTreeListener):
@@ -12,6 +15,7 @@ class KotlinParserListener(ParseTreeListener):
     # Exit a parse tree produced by KotlinParser#kotlinFile.
     def exitKotlinFile(self, ctx:KotlinParser.KotlinFileContext):
         pass
+
 
     # Enter a parse tree produced by KotlinParser#script.
     def enterScript(self, ctx:KotlinParser.ScriptContext):

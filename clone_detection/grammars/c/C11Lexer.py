@@ -7,6 +7,8 @@ if sys.version_info[1] > 5:
 else:
     from typing.io import TextIO
 
+from clone_detection.grammars.grammars_registry import LEXERS
+
 
 def serializedATN():
     return [
@@ -513,6 +515,7 @@ def serializedATN():
         1295,1298,1308,1322,1,0,1,0
     ]
 
+@LEXERS.register('c')
 class C11Lexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())

@@ -1,4 +1,4 @@
-# Generated from KotlinParser.g4 by ANTLR 4.7.1
+# Generated from ../clone_detection/grammars/kotlin/KotlinParser.g4 by ANTLR 4.7.1
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -1431,8 +1431,9 @@ def serializedATN():
         buf.write("\u0a1e\u0a24\u0a27\u0a2d\u0a34\u0a3c\u0a41\u0a48\u0a4b")
         return buf.getvalue()
 
+
 @PARSERS.register('kt')
-class KotlinParser ( Parser ):
+class KotlinParser (Parser):
 
     grammarFileName = "KotlinParser.g4"
 
@@ -1442,70 +1443,70 @@ class KotlinParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "'...'", "'.'", "','", "'('", 
-                     "<INVALID>", "'['", "<INVALID>", "'{'", "'}'", "'*'", 
-                     "'%'", "'/'", "'+'", "'-'", "'++'", "'--'", "'&&'", 
-                     "'||'", "'!'", "':'", "';'", "'='", "'+='", "'-='", 
-                     "'*='", "'/='", "'%='", "'->'", "'=>'", "'..'", "'::'", 
-                     "'?::'", "';;'", "'#'", "'@'", "'?'", "'?:'", "'<'", 
-                     "'>'", "'<='", "'>='", "'!='", "'!=='", "'as?'", "'=='", 
-                     "'==='", "'''", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'@file'", "'package'", "'import'", "'class'", "'interface'", 
-                     "'fun'", "'object'", "'val'", "'var'", "'typealias'", 
-                     "'constructor'", "'by'", "'companion'", "'init'", "'this'", 
-                     "'super'", "'typeof'", "'where'", "'if'", "'else'", 
-                     "'when'", "'try'", "'catch'", "'finally'", "'for'", 
-                     "'do'", "'while'", "'throw'", "'return'", "'continue'", 
-                     "'break'", "'as'", "'is'", "'in'", "<INVALID>", "<INVALID>", 
-                     "'out'", "'@field'", "'@property'", "'@get'", "'@set'", 
-                     "'get'", "'set'", "'@receiver'", "'@param'", "'@setparam'", 
-                     "'@delegate'", "'dynamic'", "'public'", "'private'", 
-                     "'protected'", "'internal'", "'enum'", "'sealed'", 
-                     "'annotation'", "'data'", "'inner'", "'tailrec'", "'operator'", 
-                     "'inline'", "'infix'", "'external'", "'suspend'", "'override'", 
-                     "'abstract'", "'final'", "'open'", "'const'", "'lateinit'", 
-                     "'vararg'", "'noinline'", "'crossinline'", "'reified'", 
-                     "<INVALID>", "'\"\"\"'", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+    literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
+                     "<INVALID>", "<INVALID>", "'...'", "'.'", "','", "'('",
+                     "<INVALID>", "'['", "<INVALID>", "'{'", "'}'", "'*'",
+                     "'%'", "'/'", "'+'", "'-'", "'++'", "'--'", "'&&'",
+                     "'||'", "'!'", "':'", "';'", "'='", "'+='", "'-='",
+                     "'*='", "'/='", "'%='", "'->'", "'=>'", "'..'", "'::'",
+                     "'?::'", "';;'", "'#'", "'@'", "'?'", "'?:'", "'<'",
+                     "'>'", "'<='", "'>='", "'!='", "'!=='", "'as?'", "'=='",
+                     "'==='", "'''", "<INVALID>", "<INVALID>", "<INVALID>",
+                     "'@file'", "'package'", "'import'", "'class'", "'interface'",
+                     "'fun'", "'object'", "'val'", "'var'", "'typealias'",
+                     "'constructor'", "'by'", "'companion'", "'init'", "'this'",
+                     "'super'", "'typeof'", "'where'", "'if'", "'else'",
+                     "'when'", "'try'", "'catch'", "'finally'", "'for'",
+                     "'do'", "'while'", "'throw'", "'return'", "'continue'",
+                     "'break'", "'as'", "'is'", "'in'", "<INVALID>", "<INVALID>",
+                     "'out'", "'@field'", "'@property'", "'@get'", "'@set'",
+                     "'get'", "'set'", "'@receiver'", "'@param'", "'@setparam'",
+                     "'@delegate'", "'dynamic'", "'public'", "'private'",
+                     "'protected'", "'internal'", "'enum'", "'sealed'",
+                     "'annotation'", "'data'", "'inner'", "'tailrec'", "'operator'",
+                     "'inline'", "'infix'", "'external'", "'suspend'", "'override'",
+                     "'abstract'", "'final'", "'open'", "'const'", "'lateinit'",
+                     "'vararg'", "'noinline'", "'crossinline'", "'reified'",
+                     "<INVALID>", "'\"\"\"'", "<INVALID>", "<INVALID>",
+                     "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>",
                      "<INVALID>", "<INVALID>", "'null'" ]
 
-    symbolicNames = [ "<INVALID>", "ShebangLine", "DelimitedComment", "LineComment", 
-                      "WS", "NL", "RESERVED", "DOT", "COMMA", "LPAREN", 
-                      "RPAREN", "LSQUARE", "RSQUARE", "LCURL", "RCURL", 
-                      "MULT", "MOD", "DIV", "ADD", "SUB", "INCR", "DECR", 
-                      "CONJ", "DISJ", "EXCL", "COLON", "SEMICOLON", "ASSIGNMENT", 
-                      "ADD_ASSIGNMENT", "SUB_ASSIGNMENT", "MULT_ASSIGNMENT", 
-                      "DIV_ASSIGNMENT", "MOD_ASSIGNMENT", "ARROW", "DOUBLE_ARROW", 
-                      "RANGE", "COLONCOLON", "Q_COLONCOLON", "DOUBLE_SEMICOLON", 
-                      "HASH", "AT", "QUEST", "ELVIS", "LANGLE", "RANGLE", 
-                      "LE", "GE", "EXCL_EQ", "EXCL_EQEQ", "AS_SAFE", "EQEQ", 
-                      "EQEQEQ", "SINGLE_QUOTE", "RETURN_AT", "CONTINUE_AT", 
-                      "BREAK_AT", "FILE", "PACKAGE", "IMPORT", "CLASS", 
-                      "INTERFACE", "FUN", "OBJECT", "VAL", "VAR", "TYPE_ALIAS", 
-                      "CONSTRUCTOR", "BY", "COMPANION", "INIT", "THIS", 
-                      "SUPER", "TYPEOF", "WHERE", "IF", "ELSE", "WHEN", 
-                      "TRY", "CATCH", "FINALLY", "FOR", "DO", "WHILE", "THROW", 
-                      "RETURN", "CONTINUE", "BREAK", "AS", "IS", "IN", "NOT_IS", 
-                      "NOT_IN", "OUT", "FIELD", "PROPERTY", "GET", "SET", 
-                      "GETTER", "SETTER", "RECEIVER", "PARAM", "SETPARAM", 
-                      "DELEGATE", "DYNAMIC", "PUBLIC", "PRIVATE", "PROTECTED", 
-                      "INTERNAL", "ENUM", "SEALED", "ANNOTATION", "DATA", 
-                      "INNER", "TAILREC", "OPERATOR", "INLINE", "INFIX", 
-                      "EXTERNAL", "SUSPEND", "OVERRIDE", "ABSTRACT", "FINAL", 
-                      "OPEN", "CONST", "LATEINIT", "VARARG", "NOINLINE", 
-                      "CROSSINLINE", "REIFIED", "QUOTE_OPEN", "TRIPLE_QUOTE_OPEN", 
-                      "RealLiteral", "FloatLiteral", "DoubleLiteral", "LongLiteral", 
-                      "IntegerLiteral", "HexLiteral", "BinLiteral", "BooleanLiteral", 
-                      "NullLiteral", "Identifier", "LabelReference", "LabelDefinition", 
-                      "FieldIdentifier", "CharacterLiteral", "UNICODE_CLASS_LL", 
-                      "UNICODE_CLASS_LM", "UNICODE_CLASS_LO", "UNICODE_CLASS_LT", 
-                      "UNICODE_CLASS_LU", "UNICODE_CLASS_ND", "UNICODE_CLASS_NL", 
-                      "Inside_Comment", "Inside_WS", "Inside_NL", "QUOTE_CLOSE", 
-                      "LineStrRef", "LineStrText", "LineStrEscapedChar", 
-                      "LineStrExprStart", "TRIPLE_QUOTE_CLOSE", "MultiLineStringQuote", 
-                      "MultiLineStrRef", "MultiLineStrText", "MultiLineStrEscapedChar", 
-                      "MultiLineStrExprStart", "MultiLineNL", "StrExpr_IN", 
+    symbolicNames = [ "<INVALID>", "ShebangLine", "DelimitedComment", "LineComment",
+                      "WS", "NL", "RESERVED", "DOT", "COMMA", "LPAREN",
+                      "RPAREN", "LSQUARE", "RSQUARE", "LCURL", "RCURL",
+                      "MULT", "MOD", "DIV", "ADD", "SUB", "INCR", "DECR",
+                      "CONJ", "DISJ", "EXCL", "COLON", "SEMICOLON", "ASSIGNMENT",
+                      "ADD_ASSIGNMENT", "SUB_ASSIGNMENT", "MULT_ASSIGNMENT",
+                      "DIV_ASSIGNMENT", "MOD_ASSIGNMENT", "ARROW", "DOUBLE_ARROW",
+                      "RANGE", "COLONCOLON", "Q_COLONCOLON", "DOUBLE_SEMICOLON",
+                      "HASH", "AT", "QUEST", "ELVIS", "LANGLE", "RANGLE",
+                      "LE", "GE", "EXCL_EQ", "EXCL_EQEQ", "AS_SAFE", "EQEQ",
+                      "EQEQEQ", "SINGLE_QUOTE", "RETURN_AT", "CONTINUE_AT",
+                      "BREAK_AT", "FILE", "PACKAGE", "IMPORT", "CLASS",
+                      "INTERFACE", "FUN", "OBJECT", "VAL", "VAR", "TYPE_ALIAS",
+                      "CONSTRUCTOR", "BY", "COMPANION", "INIT", "THIS",
+                      "SUPER", "TYPEOF", "WHERE", "IF", "ELSE", "WHEN",
+                      "TRY", "CATCH", "FINALLY", "FOR", "DO", "WHILE", "THROW",
+                      "RETURN", "CONTINUE", "BREAK", "AS", "IS", "IN", "NOT_IS",
+                      "NOT_IN", "OUT", "FIELD", "PROPERTY", "GET", "SET",
+                      "GETTER", "SETTER", "RECEIVER", "PARAM", "SETPARAM",
+                      "DELEGATE", "DYNAMIC", "PUBLIC", "PRIVATE", "PROTECTED",
+                      "INTERNAL", "ENUM", "SEALED", "ANNOTATION", "DATA",
+                      "INNER", "TAILREC", "OPERATOR", "INLINE", "INFIX",
+                      "EXTERNAL", "SUSPEND", "OVERRIDE", "ABSTRACT", "FINAL",
+                      "OPEN", "CONST", "LATEINIT", "VARARG", "NOINLINE",
+                      "CROSSINLINE", "REIFIED", "QUOTE_OPEN", "TRIPLE_QUOTE_OPEN",
+                      "RealLiteral", "FloatLiteral", "DoubleLiteral", "LongLiteral",
+                      "IntegerLiteral", "HexLiteral", "BinLiteral", "BooleanLiteral",
+                      "NullLiteral", "Identifier", "LabelReference", "LabelDefinition",
+                      "FieldIdentifier", "CharacterLiteral", "UNICODE_CLASS_LL",
+                      "UNICODE_CLASS_LM", "UNICODE_CLASS_LO", "UNICODE_CLASS_LT",
+                      "UNICODE_CLASS_LU", "UNICODE_CLASS_ND", "UNICODE_CLASS_NL",
+                      "Inside_Comment", "Inside_WS", "Inside_NL", "QUOTE_CLOSE",
+                      "LineStrRef", "LineStrText", "LineStrEscapedChar",
+                      "LineStrExprStart", "TRIPLE_QUOTE_CLOSE", "MultiLineStringQuote",
+                      "MultiLineStrRef", "MultiLineStrText", "MultiLineStrEscapedChar",
+                      "MultiLineStrExprStart", "MultiLineNL", "StrExpr_IN",
                       "StrExpr_Comment", "StrExpr_WS", "StrExpr_NL" ]
 
     RULE_kotlinFile = 0
@@ -1655,49 +1656,49 @@ class KotlinParser ( Parser ):
     RULE_semi = 144
     RULE_anysemi = 145
 
-    ruleNames =  [ "kotlinFile", "script", "preamble", "fileAnnotations", 
-                   "fileAnnotation", "packageHeader", "importList", "importHeader", 
-                   "importAlias", "topLevelObject", "classDeclaration", 
-                   "primaryConstructor", "classParameters", "classParameter", 
-                   "delegationSpecifiers", "delegationSpecifier", "constructorInvocation", 
-                   "explicitDelegation", "classBody", "classMemberDeclaration", 
-                   "anonymousInitializer", "secondaryConstructor", "constructorDelegationCall", 
-                   "enumClassBody", "enumEntries", "enumEntry", "functionDeclaration", 
-                   "functionValueParameters", "functionValueParameter", 
-                   "parameter", "functionBody", "objectDeclaration", "companionObject", 
-                   "propertyDeclaration", "multiVariableDeclaration", "variableDeclaration", 
-                   "getter", "setter", "typeAlias", "typeParameters", "typeParameter", 
-                   "type", "typeModifierList", "parenthesizedType", "nullableType", 
-                   "typeReference", "functionType", "functionTypeReceiver", 
-                   "userType", "simpleUserType", "functionTypeParameters", 
-                   "typeConstraints", "typeConstraint", "block", "statements", 
-                   "statement", "blockLevelExpression", "declaration", "expression", 
-                   "disjunction", "conjunction", "equalityComparison", "comparison", 
-                   "namedInfix", "elvisExpression", "infixFunctionCall", 
-                   "rangeExpression", "additiveExpression", "multiplicativeExpression", 
-                   "typeRHS", "prefixUnaryExpression", "postfixUnaryExpression", 
-                   "atomicExpression", "parenthesizedExpression", "callSuffix", 
-                   "annotatedLambda", "arrayAccess", "valueArguments", "typeArguments", 
-                   "typeProjection", "typeProjectionModifierList", "valueArgument", 
-                   "literalConstant", "stringLiteral", "lineStringLiteral", 
-                   "multiLineStringLiteral", "lineStringContent", "lineStringExpression", 
-                   "multiLineStringContent", "multiLineStringExpression", 
-                   "functionLiteral", "lambdaParameters", "lambdaParameter", 
-                   "objectLiteral", "collectionLiteral", "thisExpression", 
-                   "superExpression", "conditionalExpression", "ifExpression", 
-                   "controlStructureBody", "whenExpression", "whenEntry", 
-                   "whenCondition", "rangeTest", "typeTest", "tryExpression", 
-                   "catchBlock", "finallyBlock", "loopExpression", "forExpression", 
-                   "whileExpression", "doWhileExpression", "jumpExpression", 
-                   "callableReference", "assignmentOperator", "equalityOperation", 
-                   "comparisonOperator", "inOperator", "isOperator", "additiveOperator", 
-                   "multiplicativeOperation", "typeOperation", "prefixUnaryOperation", 
-                   "postfixUnaryOperation", "memberAccessOperator", "modifierList", 
-                   "modifier", "classModifier", "memberModifier", "visibilityModifier", 
-                   "varianceAnnotation", "functionModifier", "propertyModifier", 
-                   "inheritanceModifier", "parameterModifier", "typeParameterModifier", 
-                   "labelDefinition", "annotations", "annotation", "annotationList", 
-                   "annotationUseSiteTarget", "unescapedAnnotation", "identifier", 
+    ruleNames =  [ "kotlinFile", "script", "preamble", "fileAnnotations",
+                   "fileAnnotation", "packageHeader", "importList", "importHeader",
+                   "importAlias", "topLevelObject", "classDeclaration",
+                   "primaryConstructor", "classParameters", "classParameter",
+                   "delegationSpecifiers", "delegationSpecifier", "constructorInvocation",
+                   "explicitDelegation", "classBody", "classMemberDeclaration",
+                   "anonymousInitializer", "secondaryConstructor", "constructorDelegationCall",
+                   "enumClassBody", "enumEntries", "enumEntry", "functionDeclaration",
+                   "functionValueParameters", "functionValueParameter",
+                   "parameter", "functionBody", "objectDeclaration", "companionObject",
+                   "propertyDeclaration", "multiVariableDeclaration", "variableDeclaration",
+                   "getter", "setter", "typeAlias", "typeParameters", "typeParameter",
+                   "type", "typeModifierList", "parenthesizedType", "nullableType",
+                   "typeReference", "functionType", "functionTypeReceiver",
+                   "userType", "simpleUserType", "functionTypeParameters",
+                   "typeConstraints", "typeConstraint", "block", "statements",
+                   "statement", "blockLevelExpression", "declaration", "expression",
+                   "disjunction", "conjunction", "equalityComparison", "comparison",
+                   "namedInfix", "elvisExpression", "infixFunctionCall",
+                   "rangeExpression", "additiveExpression", "multiplicativeExpression",
+                   "typeRHS", "prefixUnaryExpression", "postfixUnaryExpression",
+                   "atomicExpression", "parenthesizedExpression", "callSuffix",
+                   "annotatedLambda", "arrayAccess", "valueArguments", "typeArguments",
+                   "typeProjection", "typeProjectionModifierList", "valueArgument",
+                   "literalConstant", "stringLiteral", "lineStringLiteral",
+                   "multiLineStringLiteral", "lineStringContent", "lineStringExpression",
+                   "multiLineStringContent", "multiLineStringExpression",
+                   "functionLiteral", "lambdaParameters", "lambdaParameter",
+                   "objectLiteral", "collectionLiteral", "thisExpression",
+                   "superExpression", "conditionalExpression", "ifExpression",
+                   "controlStructureBody", "whenExpression", "whenEntry",
+                   "whenCondition", "rangeTest", "typeTest", "tryExpression",
+                   "catchBlock", "finallyBlock", "loopExpression", "forExpression",
+                   "whileExpression", "doWhileExpression", "jumpExpression",
+                   "callableReference", "assignmentOperator", "equalityOperation",
+                   "comparisonOperator", "inOperator", "isOperator", "additiveOperator",
+                   "multiplicativeOperation", "typeOperation", "prefixUnaryOperation",
+                   "postfixUnaryOperation", "memberAccessOperator", "modifierList",
+                   "modifier", "classModifier", "memberModifier", "visibilityModifier",
+                   "varianceAnnotation", "functionModifier", "propertyModifier",
+                   "inheritanceModifier", "parameterModifier", "typeParameterModifier",
+                   "labelDefinition", "annotations", "annotation", "annotationList",
+                   "annotationUseSiteTarget", "unescapedAnnotation", "identifier",
                    "simpleIdentifier", "semi", "anysemi" ]
 
     EOF = Token.EOF
@@ -1924,6 +1925,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitKotlinFile" ):
                 listener.exitKotlinFile(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKotlinFile" ):
+                return visitor.visitKotlinFile(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1940,7 +1947,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 292
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 297
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,0,self._ctx)
@@ -1967,7 +1974,7 @@ class KotlinParser ( Parser ):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==KotlinParser.NL or _la==KotlinParser.SEMICOLON:
-                    self.state = 307 
+                    self.state = 307
                     self._errHandler.sync(self)
                     _alt = 1
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -1977,7 +1984,7 @@ class KotlinParser ( Parser ):
 
                         else:
                             raise NoViableAltException(self)
-                        self.state = 309 
+                        self.state = 309
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
 
@@ -2049,6 +2056,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitScript" ):
                 listener.exitScript(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScript" ):
+                return visitor.visitScript(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2065,7 +2078,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 323
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 328
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
@@ -2078,7 +2091,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 330
-                    self.anysemi() 
+                    self.anysemi()
                 self.state = 335
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
@@ -2093,7 +2106,7 @@ class KotlinParser ( Parser ):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while _la==KotlinParser.NL or _la==KotlinParser.SEMICOLON:
-                    self.state = 338 
+                    self.state = 338
                     self._errHandler.sync(self)
                     _alt = 1
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -2103,7 +2116,7 @@ class KotlinParser ( Parser ):
 
                         else:
                             raise NoViableAltException(self)
-                        self.state = 340 
+                        self.state = 340
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
 
@@ -2160,6 +2173,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPreamble" ):
                 listener.exitPreamble(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPreamble" ):
+                return visitor.visitPreamble(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2213,8 +2232,11 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFileAnnotations" ):
                 listener.exitFileAnnotations(self)
 
-
-
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFileAnnotations" ):
+                return visitor.visitFileAnnotations(self)
+            else:
+                return visitor.visitChildren(self)
 
     def fileAnnotations(self):
 
@@ -2222,7 +2244,7 @@ class KotlinParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_fileAnnotations)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 361 
+            self.state = 361
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -2232,7 +2254,7 @@ class KotlinParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 363 
+                self.state = 363
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
 
@@ -2299,6 +2321,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFileAnnotation" ):
                 listener.exitFileAnnotation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFileAnnotation" ):
+                return visitor.visitFileAnnotation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2309,7 +2337,7 @@ class KotlinParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 381 
+            self.state = 381
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -2324,13 +2352,13 @@ class KotlinParser ( Parser ):
                     if token in [KotlinParser.LSQUARE]:
                         self.state = 367
                         self.match(KotlinParser.LSQUARE)
-                        self.state = 369 
+                        self.state = 369
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
                         while True:
                             self.state = 368
                             self.unescapedAnnotation()
-                            self.state = 371 
+                            self.state = 371
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
                             if not (((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & ((1 << (KotlinParser.IMPORT - 58)) | (1 << (KotlinParser.CONSTRUCTOR - 58)) | (1 << (KotlinParser.BY - 58)) | (1 << (KotlinParser.COMPANION - 58)) | (1 << (KotlinParser.INIT - 58)) | (1 << (KotlinParser.WHERE - 58)) | (1 << (KotlinParser.CATCH - 58)) | (1 << (KotlinParser.FINALLY - 58)) | (1 << (KotlinParser.OUT - 58)) | (1 << (KotlinParser.GETTER - 58)) | (1 << (KotlinParser.SETTER - 58)) | (1 << (KotlinParser.DYNAMIC - 58)) | (1 << (KotlinParser.PUBLIC - 58)) | (1 << (KotlinParser.PRIVATE - 58)) | (1 << (KotlinParser.PROTECTED - 58)) | (1 << (KotlinParser.INTERNAL - 58)) | (1 << (KotlinParser.ENUM - 58)) | (1 << (KotlinParser.SEALED - 58)) | (1 << (KotlinParser.ANNOTATION - 58)) | (1 << (KotlinParser.DATA - 58)) | (1 << (KotlinParser.INNER - 58)) | (1 << (KotlinParser.TAILREC - 58)) | (1 << (KotlinParser.OPERATOR - 58)) | (1 << (KotlinParser.INLINE - 58)) | (1 << (KotlinParser.INFIX - 58)) | (1 << (KotlinParser.EXTERNAL - 58)) | (1 << (KotlinParser.SUSPEND - 58)) | (1 << (KotlinParser.OVERRIDE - 58)) | (1 << (KotlinParser.ABSTRACT - 58)) | (1 << (KotlinParser.FINAL - 58)))) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & ((1 << (KotlinParser.OPEN - 122)) | (1 << (KotlinParser.CONST - 122)) | (1 << (KotlinParser.LATEINIT - 122)) | (1 << (KotlinParser.VARARG - 122)) | (1 << (KotlinParser.NOINLINE - 122)) | (1 << (KotlinParser.CROSSINLINE - 122)) | (1 << (KotlinParser.REIFIED - 122)) | (1 << (KotlinParser.Identifier - 122)))) != 0)):
@@ -2357,7 +2385,7 @@ class KotlinParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 383 
+                self.state = 383
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
 
@@ -2400,6 +2428,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPackageHeader" ):
                 listener.exitPackageHeader(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackageHeader" ):
+                return visitor.visitPackageHeader(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2469,6 +2503,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitImportList" ):
                 listener.exitImportList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportList" ):
+                return visitor.visitImportList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2484,7 +2524,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 395
-                    self.importHeader() 
+                    self.importHeader()
                 self.state = 400
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,21,self._ctx)
@@ -2534,6 +2574,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitImportHeader" ):
                 listener.exitImportHeader(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportHeader" ):
+                return visitor.visitImportHeader(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2605,6 +2651,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitImportAlias" ):
                 listener.exitImportAlias(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportAlias" ):
+                return visitor.visitImportAlias(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2662,6 +2714,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTopLevelObject" ):
                 listener.exitTopLevelObject(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTopLevelObject" ):
+                return visitor.visitTopLevelObject(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2722,7 +2780,6 @@ class KotlinParser ( Parser ):
         def simpleIdentifier(self):
             return self.getTypedRuleContext(KotlinParser.SimpleIdentifierContext,0)
 
-
         def CLASS(self):
             return self.getToken(KotlinParser.CLASS, 0)
 
@@ -2776,6 +2833,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClassDeclaration" ):
                 listener.exitClassDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassDeclaration" ):
+                return visitor.visitClassDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2972,6 +3035,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPrimaryConstructor" ):
                 listener.exitPrimaryConstructor(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimaryConstructor" ):
+                return visitor.visitPrimaryConstructor(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3054,6 +3123,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitClassParameters" ):
                 listener.exitClassParameters(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassParameters" ):
+                return visitor.visitClassParameters(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3123,7 +3198,6 @@ class KotlinParser ( Parser ):
         def expression(self):
             return self.getTypedRuleContext(KotlinParser.ExpressionContext,0)
 
-
         def VAL(self):
             return self.getToken(KotlinParser.VAL, 0)
 
@@ -3140,6 +3214,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClassParameter" ):
                 listener.exitClassParameter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassParameter" ):
+                return visitor.visitClassParameter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3239,6 +3319,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitDelegationSpecifiers" ):
                 listener.exitDelegationSpecifiers(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDelegationSpecifiers" ):
+                return visitor.visitDelegationSpecifiers(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3289,7 +3375,7 @@ class KotlinParser ( Parser ):
                         _la = self._input.LA(1)
 
                     self.state = 551
-                    self.delegationSpecifier() 
+                    self.delegationSpecifier()
                 self.state = 556
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,50,self._ctx)
@@ -3330,6 +3416,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDelegationSpecifier" ):
                 listener.exitDelegationSpecifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDelegationSpecifier" ):
+                return visitor.visitDelegationSpecifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3394,6 +3486,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitConstructorInvocation" ):
                 listener.exitConstructorInvocation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstructorInvocation" ):
+                return visitor.visitConstructorInvocation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3449,6 +3547,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitExplicitDelegation" ):
                 listener.exitExplicitDelegation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplicitDelegation" ):
+                return visitor.visitExplicitDelegation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3479,7 +3583,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 573
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 578
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,53,self._ctx)
@@ -3530,6 +3634,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitClassBody" ):
                 listener.exitClassBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassBody" ):
+                return visitor.visitClassBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3548,7 +3658,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 582
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 587
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,54,self._ctx)
@@ -3639,6 +3749,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitClassMemberDeclaration" ):
                 listener.exitClassMemberDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassMemberDeclaration" ):
+                return visitor.visitClassMemberDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3698,7 +3814,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 612
-                    self.anysemi() 
+                    self.anysemi()
                 self.state = 617
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,58,self._ctx)
@@ -3740,6 +3856,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAnonymousInitializer" ):
                 listener.exitAnonymousInitializer(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnonymousInitializer" ):
+                return visitor.visitAnonymousInitializer(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3817,6 +3939,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSecondaryConstructor" ):
                 listener.exitSecondaryConstructor(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSecondaryConstructor" ):
+                return visitor.visitSecondaryConstructor(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3933,6 +4061,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitConstructorDelegationCall" ):
                 listener.exitConstructorDelegationCall(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstructorDelegationCall" ):
+                return visitor.visitConstructorDelegationCall(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4033,6 +4167,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitEnumClassBody" ):
                 listener.exitEnumClassBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnumClassBody" ):
+                return visitor.visitEnumClassBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4051,7 +4191,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 681
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 686
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,69,self._ctx)
@@ -4086,7 +4226,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 697
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 702
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,72,self._ctx)
@@ -4156,6 +4296,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitEnumEntries" ):
                 listener.exitEnumEntries(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnumEntries" ):
+                return visitor.visitEnumEntries(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4166,7 +4312,7 @@ class KotlinParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 726 
+            self.state = 726
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
@@ -4178,12 +4324,12 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 720
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 725
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,76,self._ctx)
 
-                self.state = 728 
+                self.state = 728
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & ((1 << (KotlinParser.IMPORT - 58)) | (1 << (KotlinParser.CONSTRUCTOR - 58)) | (1 << (KotlinParser.BY - 58)) | (1 << (KotlinParser.COMPANION - 58)) | (1 << (KotlinParser.INIT - 58)) | (1 << (KotlinParser.WHERE - 58)) | (1 << (KotlinParser.CATCH - 58)) | (1 << (KotlinParser.FINALLY - 58)) | (1 << (KotlinParser.OUT - 58)) | (1 << (KotlinParser.GETTER - 58)) | (1 << (KotlinParser.SETTER - 58)) | (1 << (KotlinParser.DYNAMIC - 58)) | (1 << (KotlinParser.PUBLIC - 58)) | (1 << (KotlinParser.PRIVATE - 58)) | (1 << (KotlinParser.PROTECTED - 58)) | (1 << (KotlinParser.INTERNAL - 58)) | (1 << (KotlinParser.ENUM - 58)) | (1 << (KotlinParser.SEALED - 58)) | (1 << (KotlinParser.ANNOTATION - 58)) | (1 << (KotlinParser.DATA - 58)) | (1 << (KotlinParser.INNER - 58)) | (1 << (KotlinParser.TAILREC - 58)) | (1 << (KotlinParser.OPERATOR - 58)) | (1 << (KotlinParser.INLINE - 58)) | (1 << (KotlinParser.INFIX - 58)) | (1 << (KotlinParser.EXTERNAL - 58)) | (1 << (KotlinParser.SUSPEND - 58)) | (1 << (KotlinParser.OVERRIDE - 58)) | (1 << (KotlinParser.ABSTRACT - 58)) | (1 << (KotlinParser.FINAL - 58)))) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & ((1 << (KotlinParser.OPEN - 122)) | (1 << (KotlinParser.CONST - 122)) | (1 << (KotlinParser.LATEINIT - 122)) | (1 << (KotlinParser.VARARG - 122)) | (1 << (KotlinParser.NOINLINE - 122)) | (1 << (KotlinParser.CROSSINLINE - 122)) | (1 << (KotlinParser.REIFIED - 122)) | (1 << (KotlinParser.Identifier - 122)))) != 0)):
@@ -4242,6 +4388,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnumEntry" ):
                 listener.exitEnumEntry(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnumEntry" ):
+                return visitor.visitEnumEntry(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4379,6 +4531,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionDeclaration" ):
                 listener.exitFunctionDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionDeclaration" ):
+                return visitor.visitFunctionDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4588,6 +4746,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFunctionValueParameters" ):
                 listener.exitFunctionValueParameters(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionValueParameters" ):
+                return visitor.visitFunctionValueParameters(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4662,6 +4826,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFunctionValueParameter" ):
                 listener.exitFunctionValueParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionValueParameter" ):
+                return visitor.visitFunctionValueParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4728,6 +4898,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitParameter" ):
                 listener.exitParameter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParameter" ):
+                return visitor.visitParameter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4785,6 +4961,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFunctionBody" ):
                 listener.exitFunctionBody(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionBody" ):
+                return visitor.visitFunctionBody(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4811,7 +4993,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 868
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 873
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,105,self._ctx)
@@ -4878,6 +5060,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitObjectDeclaration" ):
                 listener.exitObjectDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitObjectDeclaration" ):
+                return visitor.visitObjectDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5035,6 +5223,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCompanionObject" ):
                 listener.exitCompanionObject(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCompanionObject" ):
+                return visitor.visitCompanionObject(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5228,6 +5422,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPropertyDeclaration" ):
                 listener.exitPropertyDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPropertyDeclaration" ):
+                return visitor.visitPropertyDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5370,7 +5570,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1026
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 1031
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,137,self._ctx)
@@ -5455,6 +5655,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitMultiVariableDeclaration" ):
                 listener.exitMultiVariableDeclaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiVariableDeclaration" ):
+                return visitor.visitMultiVariableDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5518,6 +5724,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableDeclaration" ):
                 listener.exitVariableDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariableDeclaration" ):
+                return visitor.visitVariableDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5602,6 +5814,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGetter" ):
                 listener.exitGetter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGetter" ):
+                return visitor.visitGetter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5711,7 +5929,7 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1105
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1110
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,151,self._ctx)
@@ -5795,6 +6013,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitSetter" ):
                 listener.exitSetter(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSetter" ):
+                return visitor.visitSetter(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5863,7 +6087,7 @@ class KotlinParser ( Parser ):
                             pass
                         else:
                             raise NoViableAltException(self)
-                 
+
                     self.state = 1137
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,158,self._ctx)
@@ -5951,6 +6175,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeAlias" ):
                 listener.exitTypeAlias(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeAlias" ):
+                return visitor.visitTypeAlias(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6076,6 +6306,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTypeParameters" ):
                 listener.exitTypeParameters(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeParameters" ):
+                return visitor.visitTypeParameters(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6094,7 +6330,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1189
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 1194
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,168,self._ctx)
@@ -6124,13 +6360,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1203
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1208
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,170,self._ctx)
 
                     self.state = 1209
-                    self.typeParameter() 
+                    self.typeParameter()
                 self.state = 1214
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,171,self._ctx)
@@ -6192,6 +6428,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeParameter" ):
                 listener.exitTypeParameter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeParameter" ):
+                return visitor.visitTypeParameter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6298,6 +6540,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitType" ):
                 listener.exitType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType" ):
+                return visitor.visitType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6383,6 +6631,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTypeModifierList" ):
                 listener.exitTypeModifierList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeModifierList" ):
+                return visitor.visitTypeModifierList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6393,7 +6647,7 @@ class KotlinParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 1266 
+            self.state = 1266
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -6425,7 +6679,7 @@ class KotlinParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 1268 
+                self.state = 1268
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,182,self._ctx)
 
@@ -6463,6 +6717,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitParenthesizedType" ):
                 listener.exitParenthesizedType(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParenthesizedType" ):
+                return visitor.visitParenthesizedType(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6524,6 +6784,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitNullableType" ):
                 listener.exitNullableType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNullableType" ):
+                return visitor.visitNullableType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6558,7 +6824,7 @@ class KotlinParser ( Parser ):
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 1285 
+            self.state = 1285
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -6568,7 +6834,7 @@ class KotlinParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 1287 
+                self.state = 1287
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,185,self._ctx)
 
@@ -6613,6 +6879,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeReference" ):
                 listener.exitTypeReference(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeReference" ):
+                return visitor.visitTypeReference(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6696,6 +6968,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionType" ):
                 listener.exitFunctionType(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionType" ):
+                return visitor.visitFunctionType(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6801,6 +7079,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFunctionTypeReceiver" ):
                 listener.exitFunctionTypeReceiver(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionTypeReceiver" ):
+                return visitor.visitFunctionTypeReceiver(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6875,6 +7159,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitUserType" ):
                 listener.exitUserType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUserType" ):
+                return visitor.visitUserType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6915,7 +7205,7 @@ class KotlinParser ( Parser ):
                         _la = self._input.LA(1)
 
                     self.state = 1348
-                    self.simpleUserType() 
+                    self.simpleUserType()
                 self.state = 1353
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,195,self._ctx)
@@ -6958,6 +7248,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimpleUserType" ):
                 listener.exitSimpleUserType(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleUserType" ):
+                return visitor.visitSimpleUserType(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7039,6 +7335,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionTypeParameters" ):
                 listener.exitFunctionTypeParameters(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionTypeParameters" ):
+                return visitor.visitFunctionTypeParameters(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7137,6 +7439,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTypeConstraints" ):
                 listener.exitTypeConstraints(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeConstraints" ):
+                return visitor.visitTypeConstraints(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7189,7 +7497,7 @@ class KotlinParser ( Parser ):
                         _la = self._input.LA(1)
 
                     self.state = 1402
-                    self.typeConstraint() 
+                    self.typeConstraint()
                 self.state = 1407
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,204,self._ctx)
@@ -7242,6 +7550,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeConstraint" ):
                 listener.exitTypeConstraint(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeConstraint" ):
+                return visitor.visitTypeConstraint(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7324,6 +7638,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitBlock" ):
                 listener.exitBlock(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock" ):
+                return visitor.visitBlock(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7378,6 +7698,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitStatements" ):
                 listener.exitStatements(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatements" ):
+                return visitor.visitStatements(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7393,7 +7719,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1434
-                    self.anysemi() 
+                    self.anysemi()
                 self.state = 1439
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,208,self._ctx)
@@ -7409,7 +7735,7 @@ class KotlinParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,211,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
-                        self.state = 1442 
+                        self.state = 1442
                         self._errHandler.sync(self)
                         _alt = 1
                         while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -7419,7 +7745,7 @@ class KotlinParser ( Parser ):
 
                             else:
                                 raise NoViableAltException(self)
-                            self.state = 1444 
+                            self.state = 1444
                             self._errHandler.sync(self)
                             _alt = self._interp.adaptivePredict(self._input,209,self._ctx)
 
@@ -7430,7 +7756,7 @@ class KotlinParser ( Parser ):
                             self.state = 1446
                             self.statement()
 
-                 
+
                     self.state = 1453
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,211,self._ctx)
@@ -7469,6 +7795,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7536,6 +7868,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitBlockLevelExpression" ):
                 listener.exitBlockLevelExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlockLevelExpression" ):
+                return visitor.visitBlockLevelExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7551,7 +7889,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1460
-                    self.annotations() 
+                    self.annotations()
                 self.state = 1465
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,214,self._ctx)
@@ -7562,7 +7900,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1466
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 1471
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,215,self._ctx)
@@ -7616,6 +7954,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeclaration" ):
                 listener.exitDeclaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclaration" ):
+                return visitor.visitDeclaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7700,6 +8044,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
+                return visitor.visitExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7719,7 +8069,7 @@ class KotlinParser ( Parser ):
                     self.state = 1487
                     self.assignmentOperator()
                     self.state = 1488
-                    self.disjunction() 
+                    self.disjunction()
                 self.state = 1494
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,218,self._ctx)
@@ -7768,6 +8118,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitDisjunction" ):
                 listener.exitDisjunction(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDisjunction" ):
+                return visitor.visitDisjunction(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7803,13 +8159,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1503
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1508
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,220,self._ctx)
 
                     self.state = 1509
-                    self.conjunction() 
+                    self.conjunction()
                 self.state = 1514
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,221,self._ctx)
@@ -7858,6 +8214,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitConjunction" ):
                 listener.exitConjunction(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConjunction" ):
+                return visitor.visitConjunction(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7893,13 +8255,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1523
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1528
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,223,self._ctx)
 
                     self.state = 1529
-                    self.equalityComparison() 
+                    self.equalityComparison()
                 self.state = 1534
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,224,self._ctx)
@@ -7949,6 +8311,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitEqualityComparison" ):
                 listener.exitEqualityComparison(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualityComparison" ):
+                return visitor.visitEqualityComparison(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7973,13 +8341,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1537
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1542
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,225,self._ctx)
 
                     self.state = 1543
-                    self.comparison() 
+                    self.comparison()
                 self.state = 1549
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,226,self._ctx)
@@ -8026,6 +8394,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitComparison" ):
                 listener.exitComparison(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComparison" ):
+                return visitor.visitComparison(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8049,7 +8423,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1552
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 1557
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,227,self._ctx)
@@ -8111,6 +8485,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitNamedInfix" ):
                 listener.exitNamedInfix(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNamedInfix" ):
+                return visitor.visitNamedInfix(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8127,7 +8507,7 @@ class KotlinParser ( Parser ):
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,232,self._ctx)
             if la_ == 1:
-                self.state = 1572 
+                self.state = 1572
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -8140,7 +8520,7 @@ class KotlinParser ( Parser ):
                         while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                             if _alt==1:
                                 self.state = 1564
-                                self.match(KotlinParser.NL) 
+                                self.match(KotlinParser.NL)
                             self.state = 1569
                             self._errHandler.sync(self)
                             _alt = self._interp.adaptivePredict(self._input,229,self._ctx)
@@ -8150,7 +8530,7 @@ class KotlinParser ( Parser ):
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 1574 
+                    self.state = 1574
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,230,self._ctx)
 
@@ -8216,6 +8596,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitElvisExpression" ):
                 listener.exitElvisExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElvisExpression" ):
+                return visitor.visitElvisExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8251,13 +8637,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1595
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1600
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,234,self._ctx)
 
                     self.state = 1601
-                    self.infixFunctionCall() 
+                    self.infixFunctionCall()
                 self.state = 1606
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,235,self._ctx)
@@ -8307,6 +8693,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitInfixFunctionCall" ):
                 listener.exitInfixFunctionCall(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInfixFunctionCall" ):
+                return visitor.visitInfixFunctionCall(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8331,13 +8723,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1609
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1614
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,236,self._ctx)
 
                     self.state = 1615
-                    self.rangeExpression() 
+                    self.rangeExpression()
                 self.state = 1621
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,237,self._ctx)
@@ -8386,6 +8778,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitRangeExpression" ):
                 listener.exitRangeExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRangeExpression" ):
+                return visitor.visitRangeExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8410,13 +8808,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1624
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1629
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,238,self._ctx)
 
                     self.state = 1630
-                    self.additiveExpression() 
+                    self.additiveExpression()
                 self.state = 1635
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,239,self._ctx)
@@ -8466,6 +8864,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitAdditiveExpression" ):
                 listener.exitAdditiveExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdditiveExpression" ):
+                return visitor.visitAdditiveExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8490,13 +8894,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1638
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1643
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,240,self._ctx)
 
                     self.state = 1644
-                    self.multiplicativeExpression() 
+                    self.multiplicativeExpression()
                 self.state = 1650
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,241,self._ctx)
@@ -8546,6 +8950,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitMultiplicativeExpression" ):
                 listener.exitMultiplicativeExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplicativeExpression" ):
+                return visitor.visitMultiplicativeExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8570,13 +8980,13 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 1653
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 1658
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,242,self._ctx)
 
                     self.state = 1659
-                    self.typeRHS() 
+                    self.typeRHS()
                 self.state = 1665
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,243,self._ctx)
@@ -8626,6 +9036,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTypeRHS" ):
                 listener.exitTypeRHS(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeRHS" ):
+                return visitor.visitTypeRHS(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8656,7 +9072,7 @@ class KotlinParser ( Parser ):
                     self.state = 1673
                     self.typeOperation()
                     self.state = 1674
-                    self.prefixUnaryExpression() 
+                    self.prefixUnaryExpression()
                 self.state = 1680
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,245,self._ctx)
@@ -8697,6 +9113,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPrefixUnaryExpression" ):
                 listener.exitPrefixUnaryExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrefixUnaryExpression" ):
+                return visitor.visitPrefixUnaryExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8712,7 +9134,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1681
-                    self.prefixUnaryOperation() 
+                    self.prefixUnaryOperation()
                 self.state = 1686
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,246,self._ctx)
@@ -8759,6 +9181,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPostfixUnaryExpression" ):
                 listener.exitPostfixUnaryExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPostfixUnaryExpression" ):
+                return visitor.visitPostfixUnaryExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8788,7 +9216,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1693
-                    self.postfixUnaryOperation() 
+                    self.postfixUnaryOperation()
                 self.state = 1698
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,248,self._ctx)
@@ -8865,6 +9293,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAtomicExpression" ):
                 listener.exitAtomicExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAtomicExpression" ):
+                return visitor.visitAtomicExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8975,6 +9409,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitParenthesizedExpression" ):
                 listener.exitParenthesizedExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParenthesizedExpression" ):
+                return visitor.visitParenthesizedExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9030,6 +9470,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitCallSuffix" ):
                 listener.exitCallSuffix(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCallSuffix" ):
+                return visitor.visitCallSuffix(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9059,7 +9505,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1721
-                        self.annotatedLambda() 
+                        self.annotatedLambda()
                     self.state = 1726
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,251,self._ctx)
@@ -9075,7 +9521,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1728
-                        self.annotatedLambda() 
+                        self.annotatedLambda()
                     self.state = 1733
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,252,self._ctx)
@@ -9083,7 +9529,7 @@ class KotlinParser ( Parser ):
                 pass
             elif token in [KotlinParser.NL, KotlinParser.LCURL, KotlinParser.AT, KotlinParser.FILE, KotlinParser.IMPORT, KotlinParser.CONSTRUCTOR, KotlinParser.BY, KotlinParser.COMPANION, KotlinParser.INIT, KotlinParser.WHERE, KotlinParser.CATCH, KotlinParser.FINALLY, KotlinParser.OUT, KotlinParser.FIELD, KotlinParser.PROPERTY, KotlinParser.GET, KotlinParser.SET, KotlinParser.GETTER, KotlinParser.SETTER, KotlinParser.RECEIVER, KotlinParser.PARAM, KotlinParser.SETPARAM, KotlinParser.DELEGATE, KotlinParser.DYNAMIC, KotlinParser.PUBLIC, KotlinParser.PRIVATE, KotlinParser.PROTECTED, KotlinParser.INTERNAL, KotlinParser.ENUM, KotlinParser.SEALED, KotlinParser.ANNOTATION, KotlinParser.DATA, KotlinParser.INNER, KotlinParser.TAILREC, KotlinParser.OPERATOR, KotlinParser.INLINE, KotlinParser.INFIX, KotlinParser.EXTERNAL, KotlinParser.SUSPEND, KotlinParser.OVERRIDE, KotlinParser.ABSTRACT, KotlinParser.FINAL, KotlinParser.OPEN, KotlinParser.CONST, KotlinParser.LATEINIT, KotlinParser.VARARG, KotlinParser.NOINLINE, KotlinParser.CROSSINLINE, KotlinParser.REIFIED, KotlinParser.Identifier, KotlinParser.LabelReference, KotlinParser.LabelDefinition]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 1735 
+                self.state = 1735
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -9093,7 +9539,7 @@ class KotlinParser ( Parser ):
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 1737 
+                    self.state = 1737
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,253,self._ctx)
 
@@ -9145,6 +9591,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAnnotatedLambda" ):
                 listener.exitAnnotatedLambda(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnnotatedLambda" ):
+                return visitor.visitAnnotatedLambda(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9230,6 +9682,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitArrayAccess" ):
                 listener.exitArrayAccess(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayAccess" ):
+                return visitor.visitArrayAccess(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9307,6 +9765,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitValueArguments" ):
                 listener.exitValueArguments(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValueArguments" ):
+                return visitor.visitValueArguments(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9392,6 +9856,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTypeArguments" ):
                 listener.exitTypeArguments(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeArguments" ):
+                return visitor.visitTypeArguments(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9434,7 +9904,7 @@ class KotlinParser ( Parser ):
                     self.state = 1798
                     self.match(KotlinParser.COMMA)
                     self.state = 1799
-                    self.typeProjection() 
+                    self.typeProjection()
                 self.state = 1804
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,264,self._ctx)
@@ -9486,6 +9956,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeProjection" ):
                 listener.exitTypeProjection(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeProjection" ):
+                return visitor.visitTypeProjection(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9551,6 +10027,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTypeProjectionModifierList" ):
                 listener.exitTypeProjectionModifierList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeProjectionModifierList" ):
+                return visitor.visitTypeProjectionModifierList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9560,7 +10042,7 @@ class KotlinParser ( Parser ):
         self.enterRule(localctx, 160, self.RULE_typeProjectionModifierList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 1821 
+            self.state = 1821
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -9570,7 +10052,7 @@ class KotlinParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 1823 
+                self.state = 1823
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,268,self._ctx)
 
@@ -9619,6 +10101,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitValueArgument" ):
                 listener.exitValueArgument(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValueArgument" ):
+                return visitor.visitValueArgument(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9653,7 +10141,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1833
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 1838
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,270,self._ctx)
@@ -9674,7 +10162,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1844
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 1849
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,273,self._ctx)
@@ -9733,6 +10221,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLiteralConstant" ):
                 listener.exitLiteralConstant(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteralConstant" ):
+                return visitor.visitLiteralConstant(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9826,6 +10320,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitStringLiteral" ):
                 listener.exitStringLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStringLiteral" ):
+                return visitor.visitStringLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9894,6 +10394,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLineStringLiteral" ):
                 listener.exitLineStringLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLineStringLiteral" ):
+                return visitor.visitLineStringLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9989,6 +10495,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitMultiLineStringLiteral" ):
                 listener.exitMultiLineStringLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiLineStringLiteral" ):
+                return visitor.visitMultiLineStringLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10067,11 +10579,13 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitLineStringContent" ):
                 listener.exitLineStringContent(self)
 
-
-
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLineStringContent" ):
+                return visitor.visitLineStringContent(self)
+            else:
+                return visitor.visitChildren(self)
 
     def lineStringContent(self):
-
         localctx = KotlinParser.LineStringContentContext(self, self._ctx, self.state)
         self.enterRule(localctx, 172, self.RULE_lineStringContent)
         self._la = 0 # Token type
@@ -10119,8 +10633,11 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitLineStringExpression" ):
                 listener.exitLineStringExpression(self)
 
-
-
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLineStringExpression" ):
+                return visitor.visitLineStringExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
     def lineStringExpression(self):
 
@@ -10167,6 +10684,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiLineStringContent" ):
                 listener.exitMultiLineStringContent(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiLineStringContent" ):
+                return visitor.visitMultiLineStringContent(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10219,6 +10742,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiLineStringExpression" ):
                 listener.exitMultiLineStringExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiLineStringExpression" ):
+                return visitor.visitMultiLineStringExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10290,6 +10819,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFunctionLiteral" ):
                 listener.exitFunctionLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionLiteral" ):
+                return visitor.visitFunctionLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10322,7 +10857,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1908
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 1913
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,281,self._ctx)
@@ -10352,7 +10887,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1924
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 1929
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,283,self._ctx)
@@ -10377,7 +10912,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 1938
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 1943
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,285,self._ctx)
@@ -10443,6 +10978,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitLambdaParameters" ):
                 listener.exitLambdaParameters(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLambdaParameters" ):
+                return visitor.visitLambdaParameters(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10489,7 +11030,7 @@ class KotlinParser ( Parser ):
                         _la = self._input.LA(1)
 
                     self.state = 1971
-                    self.lambdaParameter() 
+                    self.lambdaParameter()
                 self.state = 1976
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,291,self._ctx)
@@ -10539,6 +11080,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLambdaParameter" ):
                 listener.exitLambdaParameter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLambdaParameter" ):
+                return visitor.visitLambdaParameter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10640,6 +11187,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitObjectLiteral" ):
                 listener.exitObjectLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitObjectLiteral" ):
+                return visitor.visitObjectLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10738,6 +11291,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitCollectionLiteral" ):
                 listener.exitCollectionLiteral(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCollectionLiteral" ):
+                return visitor.visitCollectionLiteral(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10802,6 +11361,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitThisExpression" ):
                 listener.exitThisExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitThisExpression" ):
+                return visitor.visitThisExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10868,6 +11433,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSuperExpression" ):
                 listener.exitSuperExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSuperExpression" ):
+                return visitor.visitSuperExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10954,6 +11525,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitConditionalExpression" ):
                 listener.exitConditionalExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConditionalExpression" ):
+                return visitor.visitConditionalExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11035,6 +11612,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitIfExpression" ):
                 listener.exitIfExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfExpression" ):
+                return visitor.visitIfExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11069,7 +11652,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2075
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2080
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,309,self._ctx)
@@ -11112,7 +11695,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 2094
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 2099
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,313,self._ctx)
@@ -11159,6 +11742,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitControlStructureBody" ):
                 listener.exitControlStructureBody(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitControlStructureBody" ):
+                return visitor.visitControlStructureBody(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11241,6 +11830,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitWhenExpression" ):
                 listener.exitWhenExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhenExpression" ):
+                return visitor.visitWhenExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11259,7 +11854,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2110
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2115
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,317,self._ctx)
@@ -11294,7 +11889,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2129
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2134
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,320,self._ctx)
@@ -11312,11 +11907,11 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 2136
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 2141
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,321,self._ctx)
-             
+
                 self.state = 2146
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,322,self._ctx)
@@ -11391,6 +11986,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitWhenEntry" ):
                 listener.exitWhenEntry(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhenEntry" ):
+                return visitor.visitWhenEntry(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11430,13 +12031,13 @@ class KotlinParser ( Parser ):
                         while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                             if _alt==1:
                                 self.state = 2163
-                                self.match(KotlinParser.NL) 
+                                self.match(KotlinParser.NL)
                             self.state = 2168
                             self._errHandler.sync(self)
                             _alt = self._interp.adaptivePredict(self._input,325,self._ctx)
 
                         self.state = 2169
-                        self.whenCondition() 
+                        self.whenCondition()
                     self.state = 2174
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,326,self._ctx)
@@ -11459,7 +12060,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 2182
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 2187
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,328,self._ctx)
@@ -11497,7 +12098,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 2200
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 2205
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,331,self._ctx)
@@ -11544,6 +12145,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWhenCondition" ):
                 listener.exitWhenCondition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhenCondition" ):
+                return visitor.visitWhenCondition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11613,6 +12220,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitRangeTest" ):
                 listener.exitRangeTest(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRangeTest" ):
+                return visitor.visitRangeTest(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11630,7 +12243,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2215
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2220
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,334,self._ctx)
@@ -11675,6 +12288,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeTest" ):
                 listener.exitTypeTest(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeTest" ):
+                return visitor.visitTypeTest(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11749,6 +12368,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitTryExpression" ):
                 listener.exitTryExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTryExpression" ):
+                return visitor.visitTryExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11789,7 +12414,7 @@ class KotlinParser ( Parser ):
                         _la = self._input.LA(1)
 
                     self.state = 2246
-                    self.catchBlock() 
+                    self.catchBlock()
                 self.state = 2251
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,338,self._ctx)
@@ -11873,6 +12498,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCatchBlock" ):
                 listener.exitCatchBlock(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCatchBlock" ):
+                return visitor.visitCatchBlock(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11966,6 +12597,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFinallyBlock" ):
                 listener.exitFinallyBlock(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFinallyBlock" ):
+                return visitor.visitFinallyBlock(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12026,6 +12663,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLoopExpression" ):
                 listener.exitLoopExpression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLoopExpression" ):
+                return visitor.visitLoopExpression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12122,6 +12765,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitForExpression" ):
                 listener.exitForExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForExpression" ):
+                return visitor.visitForExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12182,7 +12831,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2322
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2327
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,349,self._ctx)
@@ -12243,6 +12892,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitWhileExpression" ):
                 listener.exitWhileExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhileExpression" ):
+                return visitor.visitWhileExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12277,7 +12932,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2341
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2346
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,352,self._ctx)
@@ -12341,6 +12996,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitDoWhileExpression" ):
                 listener.exitDoWhileExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDoWhileExpression" ):
+                return visitor.visitDoWhileExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12359,7 +13020,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2351
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2356
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,354,self._ctx)
@@ -12456,6 +13117,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitJumpExpression" ):
                 listener.exitJumpExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJumpExpression" ):
+                return visitor.visitJumpExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12478,7 +13145,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 2378
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 2383
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,358,self._ctx)
@@ -12581,6 +13248,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitCallableReference" ):
                 listener.exitCallableReference(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCallableReference" ):
+                return visitor.visitCallableReference(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12609,7 +13282,7 @@ class KotlinParser ( Parser ):
                     while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                         if _alt==1:
                             self.state = 2397
-                            self.match(KotlinParser.NL) 
+                            self.match(KotlinParser.NL)
                         self.state = 2402
                         self._errHandler.sync(self)
                         _alt = self._interp.adaptivePredict(self._input,361,self._ctx)
@@ -12704,6 +13377,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitAssignmentOperator" ):
                 listener.exitAssignmentOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignmentOperator" ):
+                return visitor.visitAssignmentOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12757,6 +13436,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEqualityOperation" ):
                 listener.exitEqualityOperation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualityOperation" ):
+                return visitor.visitEqualityOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12812,6 +13497,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitComparisonOperator" ):
                 listener.exitComparisonOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComparisonOperator" ):
+                return visitor.visitComparisonOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12859,6 +13550,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInOperator" ):
                 listener.exitInOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInOperator" ):
+                return visitor.visitInOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12908,6 +13605,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitIsOperator" ):
                 listener.exitIsOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIsOperator" ):
+                return visitor.visitIsOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12955,6 +13658,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAdditiveOperator" ):
                 listener.exitAdditiveOperator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdditiveOperator" ):
+                return visitor.visitAdditiveOperator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13007,6 +13716,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitMultiplicativeOperation" ):
                 listener.exitMultiplicativeOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplicativeOperation" ):
+                return visitor.visitMultiplicativeOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13057,6 +13772,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeOperation" ):
                 listener.exitTypeOperation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeOperation" ):
+                return visitor.visitTypeOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13122,6 +13843,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrefixUnaryOperation" ):
                 listener.exitPrefixUnaryOperation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrefixUnaryOperation" ):
+                return visitor.visitPrefixUnaryOperation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13231,6 +13958,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPostfixUnaryOperation" ):
                 listener.exitPostfixUnaryOperation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPostfixUnaryOperation" ):
+                return visitor.visitPostfixUnaryOperation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13325,6 +14058,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitMemberAccessOperator" ):
                 listener.exitMemberAccessOperator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMemberAccessOperator" ):
+                return visitor.visitMemberAccessOperator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13390,6 +14129,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitModifierList" ):
                 listener.exitModifierList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitModifierList" ):
+                return visitor.visitModifierList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13399,7 +14144,7 @@ class KotlinParser ( Parser ):
         self.enterRule(localctx, 250, self.RULE_modifierList)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 2476 
+            self.state = 2476
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -13421,7 +14166,7 @@ class KotlinParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 2478 
+                self.state = 2478
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,372,self._ctx)
 
@@ -13492,6 +14237,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitModifier" ):
                 listener.exitModifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitModifier" ):
+                return visitor.visitModifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13549,7 +14300,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2491
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2496
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,374,self._ctx)
@@ -13593,6 +14344,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClassModifier" ):
                 listener.exitClassModifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClassModifier" ):
+                return visitor.visitClassModifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13641,6 +14398,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMemberModifier" ):
                 listener.exitMemberModifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMemberModifier" ):
+                return visitor.visitMemberModifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13696,6 +14459,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitVisibilityModifier" ):
                 listener.exitVisibilityModifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVisibilityModifier" ):
+                return visitor.visitVisibilityModifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13743,6 +14512,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVarianceAnnotation" ):
                 listener.exitVarianceAnnotation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarianceAnnotation" ):
+                return visitor.visitVarianceAnnotation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13804,6 +14579,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitFunctionModifier" ):
                 listener.exitFunctionModifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionModifier" ):
+                return visitor.visitFunctionModifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13849,6 +14630,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitPropertyModifier" ):
                 listener.exitPropertyModifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPropertyModifier" ):
+                return visitor.visitPropertyModifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13893,6 +14680,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInheritanceModifier" ):
                 listener.exitInheritanceModifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInheritanceModifier" ):
+                return visitor.visitInheritanceModifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13945,6 +14738,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitParameterModifier" ):
                 listener.exitParameterModifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParameterModifier" ):
+                return visitor.visitParameterModifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13989,6 +14788,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypeParameterModifier" ):
                 listener.exitTypeParameterModifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypeParameterModifier" ):
+                return visitor.visitTypeParameterModifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14035,6 +14840,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitLabelDefinition" ):
                 listener.exitLabelDefinition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLabelDefinition" ):
+                return visitor.visitLabelDefinition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14052,7 +14863,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2516
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2521
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,375,self._ctx)
@@ -14096,6 +14907,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitAnnotations" ):
                 listener.exitAnnotations(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnnotations" ):
+                return visitor.visitAnnotations(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14125,7 +14942,7 @@ class KotlinParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 2526
-                    self.match(KotlinParser.NL) 
+                    self.match(KotlinParser.NL)
                 self.state = 2531
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,377,self._ctx)
@@ -14182,6 +14999,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAnnotation" ):
                 listener.exitAnnotation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnnotation" ):
+                return visitor.visitAnnotation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14316,6 +15139,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitAnnotationList" ):
                 listener.exitAnnotationList(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnnotationList" ):
+                return visitor.visitAnnotationList(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14336,13 +15165,13 @@ class KotlinParser ( Parser ):
                 self.match(KotlinParser.COLON)
                 self.state = 2571
                 self.match(KotlinParser.LSQUARE)
-                self.state = 2573 
+                self.state = 2573
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 2572
                     self.unescapedAnnotation()
-                    self.state = 2575 
+                    self.state = 2575
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if not (((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & ((1 << (KotlinParser.IMPORT - 58)) | (1 << (KotlinParser.CONSTRUCTOR - 58)) | (1 << (KotlinParser.BY - 58)) | (1 << (KotlinParser.COMPANION - 58)) | (1 << (KotlinParser.INIT - 58)) | (1 << (KotlinParser.WHERE - 58)) | (1 << (KotlinParser.CATCH - 58)) | (1 << (KotlinParser.FINALLY - 58)) | (1 << (KotlinParser.OUT - 58)) | (1 << (KotlinParser.GETTER - 58)) | (1 << (KotlinParser.SETTER - 58)) | (1 << (KotlinParser.DYNAMIC - 58)) | (1 << (KotlinParser.PUBLIC - 58)) | (1 << (KotlinParser.PRIVATE - 58)) | (1 << (KotlinParser.PROTECTED - 58)) | (1 << (KotlinParser.INTERNAL - 58)) | (1 << (KotlinParser.ENUM - 58)) | (1 << (KotlinParser.SEALED - 58)) | (1 << (KotlinParser.ANNOTATION - 58)) | (1 << (KotlinParser.DATA - 58)) | (1 << (KotlinParser.INNER - 58)) | (1 << (KotlinParser.TAILREC - 58)) | (1 << (KotlinParser.OPERATOR - 58)) | (1 << (KotlinParser.INLINE - 58)) | (1 << (KotlinParser.INFIX - 58)) | (1 << (KotlinParser.EXTERNAL - 58)) | (1 << (KotlinParser.SUSPEND - 58)) | (1 << (KotlinParser.OVERRIDE - 58)) | (1 << (KotlinParser.ABSTRACT - 58)) | (1 << (KotlinParser.FINAL - 58)))) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & ((1 << (KotlinParser.OPEN - 122)) | (1 << (KotlinParser.CONST - 122)) | (1 << (KotlinParser.LATEINIT - 122)) | (1 << (KotlinParser.VARARG - 122)) | (1 << (KotlinParser.NOINLINE - 122)) | (1 << (KotlinParser.CROSSINLINE - 122)) | (1 << (KotlinParser.REIFIED - 122)) | (1 << (KotlinParser.Identifier - 122)))) != 0)):
@@ -14357,13 +15186,13 @@ class KotlinParser ( Parser ):
                 self.match(KotlinParser.AT)
                 self.state = 2580
                 self.match(KotlinParser.LSQUARE)
-                self.state = 2582 
+                self.state = 2582
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
                     self.state = 2581
                     self.unescapedAnnotation()
-                    self.state = 2584 
+                    self.state = 2584
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if not (((((_la - 58)) & ~0x3f) == 0 and ((1 << (_la - 58)) & ((1 << (KotlinParser.IMPORT - 58)) | (1 << (KotlinParser.CONSTRUCTOR - 58)) | (1 << (KotlinParser.BY - 58)) | (1 << (KotlinParser.COMPANION - 58)) | (1 << (KotlinParser.INIT - 58)) | (1 << (KotlinParser.WHERE - 58)) | (1 << (KotlinParser.CATCH - 58)) | (1 << (KotlinParser.FINALLY - 58)) | (1 << (KotlinParser.OUT - 58)) | (1 << (KotlinParser.GETTER - 58)) | (1 << (KotlinParser.SETTER - 58)) | (1 << (KotlinParser.DYNAMIC - 58)) | (1 << (KotlinParser.PUBLIC - 58)) | (1 << (KotlinParser.PRIVATE - 58)) | (1 << (KotlinParser.PROTECTED - 58)) | (1 << (KotlinParser.INTERNAL - 58)) | (1 << (KotlinParser.ENUM - 58)) | (1 << (KotlinParser.SEALED - 58)) | (1 << (KotlinParser.ANNOTATION - 58)) | (1 << (KotlinParser.DATA - 58)) | (1 << (KotlinParser.INNER - 58)) | (1 << (KotlinParser.TAILREC - 58)) | (1 << (KotlinParser.OPERATOR - 58)) | (1 << (KotlinParser.INLINE - 58)) | (1 << (KotlinParser.INFIX - 58)) | (1 << (KotlinParser.EXTERNAL - 58)) | (1 << (KotlinParser.SUSPEND - 58)) | (1 << (KotlinParser.OVERRIDE - 58)) | (1 << (KotlinParser.ABSTRACT - 58)) | (1 << (KotlinParser.FINAL - 58)))) != 0) or ((((_la - 122)) & ~0x3f) == 0 and ((1 << (_la - 122)) & ((1 << (KotlinParser.OPEN - 122)) | (1 << (KotlinParser.CONST - 122)) | (1 << (KotlinParser.LATEINIT - 122)) | (1 << (KotlinParser.VARARG - 122)) | (1 << (KotlinParser.NOINLINE - 122)) | (1 << (KotlinParser.CROSSINLINE - 122)) | (1 << (KotlinParser.REIFIED - 122)) | (1 << (KotlinParser.Identifier - 122)))) != 0)):
@@ -14427,6 +15256,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitAnnotationUseSiteTarget" ):
                 listener.exitAnnotationUseSiteTarget(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnnotationUseSiteTarget" ):
+                return visitor.visitAnnotationUseSiteTarget(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14480,6 +15315,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnescapedAnnotation" ):
                 listener.exitUnescapedAnnotation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnescapedAnnotation" ):
+                return visitor.visitUnescapedAnnotation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14553,6 +15394,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitIdentifier" ):
                 listener.exitIdentifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifier" ):
+                return visitor.visitIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14583,7 +15430,7 @@ class KotlinParser ( Parser ):
                     self.state = 2606
                     self.match(KotlinParser.DOT)
                     self.state = 2607
-                    self.simpleIdentifier() 
+                    self.simpleIdentifier()
                 self.state = 2612
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,391,self._ctx)
@@ -14727,6 +15574,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitSimpleIdentifier" ):
                 listener.exitSimpleIdentifier(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpleIdentifier" ):
+                return visitor.visitSimpleIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14778,6 +15631,12 @@ class KotlinParser ( Parser ):
             if hasattr( listener, "exitSemi" ):
                 listener.exitSemi(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSemi" ):
+                return visitor.visitSemi(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14792,7 +15651,7 @@ class KotlinParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,395,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 2616 
+                self.state = 2616
                 self._errHandler.sync(self)
                 _alt = 1
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -14802,7 +15661,7 @@ class KotlinParser ( Parser ):
 
                     else:
                         raise NoViableAltException(self)
-                    self.state = 2618 
+                    self.state = 2618
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,392,self._ctx)
 
@@ -14828,7 +15687,7 @@ class KotlinParser ( Parser ):
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
                         self.state = 2627
-                        self.match(KotlinParser.NL) 
+                        self.match(KotlinParser.NL)
                     self.state = 2632
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,394,self._ctx)
@@ -14866,6 +15725,12 @@ class KotlinParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAnysemi" ):
                 listener.exitAnysemi(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnysemi" ):
+                return visitor.visitAnysemi(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 

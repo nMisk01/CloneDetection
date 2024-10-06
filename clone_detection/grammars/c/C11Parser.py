@@ -7,6 +7,9 @@ if sys.version_info[1] > 5:
 	from typing import TextIO
 else:
 	from typing.io import TextIO
+ 
+from clone_detection.grammars.grammars_registry import PARSERS
+
 
 def serializedATN():
     return [
@@ -442,6 +445,7 @@ def serializedATN():
         1051,1055,1059,1066,1075,1079,1084,1091,1096,1099,1103,1110
     ]
 
+@PARSERS.register('c')
 class C11Parser ( Parser ):
 
     grammarFileName = "C11.g4"
